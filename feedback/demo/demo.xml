@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+          <record id="object0" model="feedback.feedback">
+            <field name="title">Test</field>
+            <field name="user_name">Test</field>
+            <field name="user_email">Test@Test.Test</field>
+            <field name="message">Test</field>
+          </record>
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="feedback.list">
+      <field name="name">List of appeals</field>
+      <field name="model">feedback.feedback</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="title"/>
+          <field name="user_name"/>
+          <field name="user_email"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="feedback.action_window">
+      <field name="name">Feedback</field>
+      <field name="res_model">feedback.feedback</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- Top menu item -->
+
+    <menuitem name="Feedback" id="feedback.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Check appeal" id="feedback.menu_1" parent="feedback.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List" id="feedback.menu_1_list" parent="feedback.menu_1"
+              action="feedback.action_window"/>
+
+  </data>
+</odoo>
